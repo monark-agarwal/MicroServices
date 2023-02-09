@@ -1,0 +1,18 @@
+name: dockercompose18117537800171570778
+services:
+  microservices:
+    build:
+      context: E:\DotNetSample\MicroServices
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: microservices
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+networks:
+  default:
+    name: dockercompose18117537800171570778_default
